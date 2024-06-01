@@ -17,13 +17,11 @@ import { useSelector } from "react-redux";
 
 export const PrivateRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth);
-
   return <>{isAuth ? <Outlet /> : <Navigate to="/login" />}</>;
 };
 
 export const RestrictedRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth);
-
   return <>{!isAuth ? <Outlet /> : <Navigate to="/dashboard" />}</>;
 };
 
