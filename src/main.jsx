@@ -1,21 +1,20 @@
 import { Provider } from "react-redux";
-import ReactDOM from "react-dom/client";
 import { useSelector } from "react-redux";
 import {
   createBrowserRouter,
-  RouterProvider,
   Navigate,
   Outlet,
+  RouterProvider,
 } from "react-router-dom";
+
+import ReactDOM from "react-dom/client";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import { store } from "./redux/store";
+import RootLayout from "./RootLayout";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-
-import { store } from "./redux/store";
-
-import RootLayout from "./RootLayout";
 
 export const PrivateRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth);
