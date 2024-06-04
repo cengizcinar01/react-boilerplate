@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
-
 import { useDispatch } from "react-redux";
-
 import { fetchProtectedInfo, onLogout } from "../api/auth";
-
 import { unauthenticateUser } from "../redux/slices/authSlice";
 
 const Dashboard = () => {

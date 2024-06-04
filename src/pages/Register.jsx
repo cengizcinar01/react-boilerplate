@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { onRegistration } from "../api/auth";
 
 const Register = () => {
